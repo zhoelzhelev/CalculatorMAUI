@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CalculatorMAUI.MainPage"
+             BackgroundColor="Black"
+             Shell.NavBarIsVisible="False"
+             xmlns:viewmodel="clr-namespace:CalculatorMAUI.ViewModels"
+             x:DataType="viewmodel:MainViewModel">
+
+    <Grid RowDefinitions="Auto, *"
+         Padding="10"
+         RowSpacing="10">
+
+        <Label Text="{Binding Text}"
+               FontSize="40"
+               HorizontalTextAlignment="End"
+               VerticalTextAlignment="Center"
+               Grid.Row="0" 
+               TextColor="White"/>
+
+
+        <Grid Grid.Row="1"
+      RowDefinitions="Auto, Auto, Auto, Auto"
+      ColumnDefinitions="Auto, Auto, Auto, Auto"
+      RowSpacing="8"
+      ColumnSpacing="8"
+      HorizontalOptions="Center"
+      VerticalOptions="Start">
+
+            <Button Text="AC"
+                    
+                    CornerRadius="90"
+                    FontSize="24"
+                    BackgroundColor="Orange"
+                    TextColor="White"
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    WidthRequest="90"
+                    HeightRequest="90"
+                    HorizontalOptions="Center"
+            VerticalOptions="Center"
+                    Command="{Binding ClearCommand}"/>
+
+            <Button Text="/"
+                    WidthRequest="90"
+                    HeightRequest="90"
+                    CornerRadius="90"
+                    FontSize="24"
+                    BackgroundColor="Orange"
+                    TextColor="White"
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    HorizontalOptions="Center"
+            VerticalOptions="Center"
+                    Command="{Binding TapCommand}"
+                     CommandParameter="{Binding Text,
+            Source={RelativeSource Self}}"/>
+
+            <Button Text="*"
+                    WidthRequest="90"
+                    HeightRequest="90"
+                    CornerRadius="90"
+                    FontSize="24"
+                    BackgroundColor="Orange"
+                    TextColor="White"
+                    Grid.Row="0"
+                    Grid.Column="2"
+                    HorizontalOptions="Center"
+            VerticalOptions="Center"
+                     Command="{Binding TapCommand}"
+                     CommandParameter="{Binding Text,
+            Source={RelativeSource Self}}"/>
+
+            <Button Text="-"
+                    WidthRequest="90"
+                    HeightRequest="90"
+                    CornerRadius="90"
+                    FontSize="24"
+                    BackgroundColor="Orange"
+                    TextColor="White"
+                    Grid.Row="0"
+                    Grid.Column="3"
+                    HorizontalOptions="Center"
+            VerticalOptions="Center"
+                     Command="{Binding TapCommand}"
+                     CommandParameter="{Binding Text,
+            Source={RelativeSource Self}}"/>
+
+            <Button Text="7"
+                    WidthRequest="90"
+                    HeightRequest="90"
+                    CornerRadius="90"
+                    FontSize="24"
+                    BackgroundColor="#343840"
+                    TextColor="White"
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    HorizontalOptions="Center"
+            VerticalOptions="Center"
+                     Command="{Binding TapCommand}"
+                     CommandParameter="{Binding Text,
+            Source={RelativeSource Self}}"/>
+
+            <Button Text="8"
+                    WidthRequest="90"
+                    HeightRequest="90"
+                    CornerRadius="90"
+                    FontSize="24"
+                    BackgroundColor="#343840"
+                    TextColor="White"
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    HorizontalOptions="Center"
+            VerticalOptions="Center"
+                     Command="{Binding TapCommand}"
+                     CommandParameter="{Binding Text,
+            Source={RelativeSource Self}}"/>
+
+            <Button Text="9"
+                    WidthRequest="90"
+                    HeightRequest="90"
+                    CornerRadius="90"
+                    FontSize="24"
+                    BackgroundColor="#343840"
+                    TextColor="White"
+                    Grid.Row="1"
+                    Grid.Column="2"
+                    HorizontalOptions="Center"
+            VerticalOptions="Center"
+                     Command="{Binding TapCommand}"
+                     CommandParameter="{Binding Text,
+            Source={RelativeSource Self}}"/>
+
+            <Button Text="+"
+                    WidthRequest="90"
+                    HeightRequest="90"
+                    CornerRadius="90"
+                    FontSize="24"
+                    BackgroundColor="Orange"
+                    TextColor="White"
+                    Grid.Row="1"
+                    Grid.Column="3"
+                    HorizontalOptions="Center"
+            VerticalOptions="Center"
+                     Command="{Binding TapCommand}"
+                     CommandParameter="{Binding Text,
+            Source={RelativeSource Self}}"/>
+
+            <Button Text="4"
+                    WidthRequest="90"
+                    HeightRequest="90"
+                    CornerRadius="90"
+                    FontSize="24"
+                    BackgroundColor="#343840"
+                    TextColor="White"
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    HorizontalOptions="Center"
+            VerticalOptions="Center"
+                     Command="{Binding TapCommand}"
+                     CommandParameter="{Binding Text,
+            Source={RelativeSource Self}}"/>
+
+            <Button Text="5"
+                    WidthRequest="90"
+                    HeightRequest="90"
+                    CornerRadius="90"
+                    FontSize="24"
+                    BackgroundColor="#343840"
+                    TextColor="White"
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    HorizontalOptions="Center"
+            VerticalOptions="Center"
+                     Command="{Binding TapCommand}"
+                     CommandParameter="{Binding Text,
+            Source={RelativeSource Self}}"/>
+
+            <Button Text="6"
+                    WidthRequest="90"
+                    HeightRequest="90"
+                    CornerRadius="90"
+                    FontSize="24"
+                    BackgroundColor="#343840"
+                    TextColor="White"
+                    Grid.Row="2"
+                    Grid.Column="2"
+                    HorizontalOptions="Center"
+            VerticalOptions="Center"
+                     Command="{Binding TapCommand}"
+                     CommandParameter="{Binding Text,
+            Source={RelativeSource Self}}"/>
+
+            <Button Text="="
+                    WidthRequest="90"
+                    HeightRequest="90"
+                    CornerRadius="90"
+                    FontSize="24"
+                    BackgroundColor="LightGreen"
+                    TextColor="White"
+                    Grid.Row="2"
+                    Grid.Column="3"
+                    HorizontalOptions="Center"
+            VerticalOptions="Center"
+                     Command="{Binding SumCommand}"/>
+
+            <Button Text="1"
+                    WidthRequest="90"
+                    HeightRequest="90"
+                    CornerRadius="90"
+                    FontSize="24"
+                    BackgroundColor="#343840"
+                    TextColor="White"
+                    Grid.Row="3"
+                    Grid.Column="0"
+                    HorizontalOptions="Center"
+            VerticalOptions="Center"
+                     Command="{Binding TapCommand}"
+                     CommandParameter="{Binding Text,
+            Source={RelativeSource Self}}"/>
+
+            <Button Text="2"
+                    WidthRequest="90"
+                    HeightRequest="90"
+                    CornerRadius="90"
+                    FontSize="24"
+                    BackgroundColor="#343840"
+                    TextColor="White"
+                    Grid.Row="3"
+                    Grid.Column="1"
+                    HorizontalOptions="Center"
+            VerticalOptions="Center"
+                     Command="{Binding TapCommand}"
+                     CommandParameter="{Binding Text,
+            Source={RelativeSource Self}}"/>
+
+            <Button Text="3"
+                    WidthRequest="90"
+                    HeightRequest="90"
+                    CornerRadius="90"
+                    FontSize="24"
+                    BackgroundColor="#343840"
+                    TextColor="White"
+                    Grid.Row="3"
+                    Grid.Column="2"
+                    HorizontalOptions="Center"
+            VerticalOptions="Center"
+                     Command="{Binding TapCommand}"
+                     CommandParameter="{Binding Text,
+            Source={RelativeSource Self}}"/>
+
+            <Button Text="0"
+                    WidthRequest="90"
+                    HeightRequest="90"
+                    CornerRadius="90"
+                    FontSize="24"
+                    BackgroundColor="#343840"
+                    TextColor="White"
+                    Grid.Row="3"
+                    Grid.Column="3"
+                    HorizontalOptions="Center"
+            VerticalOptions="Center"
+                     Command="{Binding TapCommand}"
+                     CommandParameter="{Binding Text,
+            Source={RelativeSource Self}}"/>
+
+       
+
+        </Grid>
+    </Grid>
+
+</ContentPage>
